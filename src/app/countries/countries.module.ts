@@ -4,13 +4,20 @@ import { ByCapitalPageComponent } from './pages/byCapitalPage/byCapitalPage.comp
 import { ByCountryPageComponent } from './pages/byCountryPage/byCountryPage.component';
 import { ByRegionPageComponent } from './pages/byRegionPage/byRegionPage.component';
 import { CountryPageComponent } from './pages/CountryPage/CountryPage.component';
+import { countriesRoutingModule } from './countries-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 @NgModule({
-  declarations: [ByCapitalPageComponent,ByCountryPageComponent,ByRegionPageComponent,CountryPageComponent],
+  declarations: [ByCapitalPageComponent,
+    ByCountryPageComponent,
+    ByRegionPageComponent,
+    CountryPageComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    countriesRoutingModule, //se importa, porque este se usa en el lazu load en el modulo app.rotuing.mdoule
+
   ]
 })
 export class CountriesModule { }
