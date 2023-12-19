@@ -6,6 +6,7 @@ import { SideBarComponent } from './components/ejemplo/sidebar.component';
 import { routingModule } from '../app.rouitng.module';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SearchBoxComponent } from './components/searchBox/searchBox.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { SearchBoxComponent } from './components/searchBox/searchBox.component';
   ],
   imports: [
     CommonModule,
-    routingModule
+    // routingModule
+    RouterModule
   ],
   exports:[
     HomePageComponent,

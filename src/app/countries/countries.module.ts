@@ -17,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     countriesRoutingModule, //se importa, porque este se usa en el lazu load en el modulo app.rotuing.mdoule
-
+    SharedModule
   ]
 })
 export class CountriesModule { }
