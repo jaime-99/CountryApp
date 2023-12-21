@@ -18,6 +18,7 @@ export class SearchBoxComponent {
 
   emitirEvento(value:string): void {
     this.onValue.emit(value);
+    //ejemplo
 
 
   }
