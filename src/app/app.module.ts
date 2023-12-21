@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { routingModule } from './app.rouitng.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { routingModule } from './app.rouitng.module';
   imports: [
     BrowserModule,
     SharedModule,
-    routingModule
+    routingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

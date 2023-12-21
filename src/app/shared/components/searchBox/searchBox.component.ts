@@ -12,7 +12,7 @@ export class SearchBoxComponent {
 
   @ViewChild('txtInput')
   public tagInput!: ElementRef<HTMLInputElement>;
-  
+
   @Output() onValue: EventEmitter<string> = new EventEmitter<string>();
 
 
