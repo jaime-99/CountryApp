@@ -9,19 +9,18 @@
     <!-- <input class="form-control" type="text"> -->
     <app-search-box (onValue)="searchByCapital($event)"
     placeholder="buscar"></app-search-box>
-
-
-
-    <ol >
-      <ul *ngFor="let c of capitales"> {{c.name}} </ul>
-    </ol>
-
-
   </div>
 </div>
 
 <div class="row">
   <div class="col">
+    <hr>
+    <ul>
+      <li *ngFor="let c of capitales">
+        {{c.name}} - {{c.population}}
+
+      </li>
+    </ul>
 
   </div>
 </div>
