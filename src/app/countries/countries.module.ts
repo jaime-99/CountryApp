@@ -6,6 +6,7 @@ import { ByRegionPageComponent } from './pages/byRegionPage/byRegionPage.compone
 import { CountryPageComponent } from './pages/CountryPage/CountryPage.component';
 import { countriesRoutingModule } from './countries-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CountryTableComponent } from './components/country-table/country-table.component';
 
 
 
@@ -13,7 +14,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [ByCapitalPageComponent,
     ByCountryPageComponent,
     ByRegionPageComponent,
-    CountryPageComponent],
+    CountryPageComponent,
+    CountryTableComponent
+  ],
   imports: [
     CommonModule,
     countriesRoutingModule, //se importa, porque este se usa en el lazu load en el modulo app.rotuing.mdoule
