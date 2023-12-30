@@ -27,8 +27,9 @@
         <td> {{c.flag}} </td>
         <td><img [src]="c.flags.svg" [alt]="c.name.common"></td>
         <td>{{c.name.common}} </td>
-        <td>{{c.capital}} </td>
+        <td>{{c.capital}} </td> 
         <td>{{c.population | number}} </td>
+        <td>  <a [routerLink]="['/countries/by', c.cca3]">  Ver mas</a> </td>
       </tr>
     </tbody>
 
