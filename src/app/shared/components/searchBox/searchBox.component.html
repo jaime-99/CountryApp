@@ -1,3 +1,8 @@
-<input class="form-control"[placeholder]="placeholder" type="text" #txtInput  (keyup.enter)="emitirEvento(txtInput.value)">
+
+<input class="form-control"[placeholder]="placeholder"
+ type="text" #txtInput
+ (keyup)="onkeyPress(txtInput.value)"
+ >
+ <!-- (keyup.enter)="emitirEvento(txtInput.value)" -->
 
 
