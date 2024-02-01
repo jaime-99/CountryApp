@@ -5,7 +5,7 @@
 <div class="row">
 
   <div class="col">
-    <app-search-box (onValue)="searchByCountry($event)"
+    <app-search-box (ondebounce)="searchByCountry($event)"
     placeholder="buscar"></app-search-box>
   </div>
 </div>
@@ -13,6 +13,7 @@
 <div class="row">
   <div class="col">
     <hr>
+    <app-loader *ngIf="isLoading"></app-loader>
     <app-country-table [countries]="countries"></app-country-table>
   </div>
 

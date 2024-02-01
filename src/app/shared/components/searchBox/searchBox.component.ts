@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { Subject, debounceTime } from 'rxjs';
 
 @Component({
@@ -8,6 +8,7 @@ import { Subject, debounceTime } from 'rxjs';
   styleUrls: ['./searchBox.component.css'],
 })
 export class SearchBoxComponent implements OnInit {
+ 
   //tipo especial de observable
   private debouncer :Subject<string> = new Subject<string>();
   ngOnInit(): void {

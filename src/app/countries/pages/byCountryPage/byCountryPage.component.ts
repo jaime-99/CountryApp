@@ -13,13 +13,16 @@ import { Country } from '../../interfaces/countries';
 export class ByCountryPageComponent {
   // public countries:CountryByCountry[] = []
   public countries:Country[] = []
+  public isLoading:boolean = false;
 
   constructor ( private countriesService:CountriesNameService) {}
 
 
   searchByCountry(term:string){
+    this.isLoading = true;
     this.countriesService.searchCountry(term).subscribe(res=>{
       this.countries = res
+      this.isLoading = false;
     })
   }
 
