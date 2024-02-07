@@ -9,10 +9,15 @@
 
     class="btn mx-2 "
     [ngClass]="{'btn-outline-primary':selectedRegion===region}"
-    (click)="searchByRegion(region)">
+    (click)="searchByRegion(region)"
+    >
     {{region}}
-    </button>
-  </div>
+
+  </button>
+  <!-- <app-search-box>
+    [initalValue]="initialValue"
+  </app-search-box> -->
+</div>
 </div>
 
 <div class="row">

@@ -4,7 +4,6 @@ export interface cacheStore{
     byCapital:TermCountries;
     ByCountries:TermCountries;
     byRegion:TermCountries;
-
 }
 
 export interface TermCountries {

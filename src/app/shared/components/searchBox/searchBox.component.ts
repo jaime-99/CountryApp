@@ -22,7 +22,9 @@ export class SearchBoxComponent implements OnInit {
 
   }
 
-  @Input()public  placeholder:string = ''
+  @Input() public placeholder:string = ''
+
+  @Input() public initalValue:string = '';
 
   @ViewChild('txtInput')
   public tagInput!: ElementRef<HTMLInputElement>;

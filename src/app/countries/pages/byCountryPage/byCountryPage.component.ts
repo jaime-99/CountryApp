@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CountriesNameService } from '../../services/countires.service';
 import { Country } from '../../interfaces/countries';
 
@@ -9,11 +9,16 @@ import { Country } from '../../interfaces/countries';
   templateUrl: './byCountryPage.component.html',
   styleUrls: ['./byCountryPage.component.css'],
 })
-export class ByCountryPageComponent {
+export class ByCountryPageComponent implements OnInit {
   public countries:Country[] = []
   public isLoading:boolean = false;
-
+  public initialValue:string = ''
+  
   constructor ( private countriesService:CountriesNameService) {}
+  ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.ByCountries.countries;
+    this.initialValue = this.countriesService.cacheStore.ByCountries.term;
+  }
 
 
   searchByCountry(term:string){

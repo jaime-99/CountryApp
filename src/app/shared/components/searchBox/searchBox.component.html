@@ -1,5 +1,5 @@
 
-<input class="form-control"[placeholder]="placeholder"
+<input [value]="initalValue" class="form-control"[placeholder]="placeholder"
  type="text" #txtInput
  (keyup)="onkeyPress(txtInput.value)"
  >
