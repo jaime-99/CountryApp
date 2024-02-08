@@ -7,7 +7,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
   styleUrls: ['./searchBox.component.css'],
 })
 export class SearchBoxComponent {
-
+  
   @Input()public  placeholder:string = ''
 
   @ViewChild('txtInput')
@@ -19,8 +19,6 @@ export class SearchBoxComponent {
   emitirEvento(value:string): void {
     this.onValue.emit(value);
     //ejemplo
-
-
   }
 
 

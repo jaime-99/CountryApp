@@ -24,9 +24,10 @@ import { LoaderComponent } from './components/loader/loader.component';
     
   ],
   imports: [
-    CommonModule,
+    // CommonModule,
     // routingModule
     RouterModule, 
+
    ],
   exports:[
     HomePageComponent,
